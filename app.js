@@ -133,23 +133,26 @@
 
 // Q15
 
-// var user = prompt("Enter Your Password");
-// for (let i = 0; i < user.length; i++) {
-//     if (!isNaN(user[0])) {
-//         alert("Password can not begin with a number");
-//         break;
-//     }
-//     else if (user.length < 6) {
-//         alert("Password must be 6 letters long");
-//         break;
-//     }
-//     if (user.charCodeAt(i) >= 65 && user.charCodeAt(i) <= 122) {
-//         if (user.charCodeAt(i + 1) <= 57 && user.charCodeAt(i + 1) >= 48) {
-//             document.write("Entered password: " + user)
-//             break;
-//         }
-//     }
-// }
+var user = prompt("Enter Your Password");
+var flag = false;
+for (let i = 0; i < user.length; i++) {
+    if (!isNaN(user[0])) {
+        alert("Password can not begin with a number");
+        break;
+    }
+    else if (user.length < 6) {
+        alert("Password must be 6 letters long");
+        break;
+    }
+    else if (user.charCodeAt(i) >= 65 && user.charCodeAt(i) <= 122) {
+        if (user.charCodeAt(i + 1) <= 57 && user.charCodeAt(i + 1) >= 48) {
+            document.write("Entered password: " + user)
+            flag = true;
+            break;
+        }
+
+    }
+}
 
 // Q16
 
